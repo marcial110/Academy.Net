@@ -7,20 +7,29 @@
     
     h1 {
         font-family: Arial, Helvetica, Verdana sans-serif;
+        color: #e6e6e6;
+        font-size: xx-large;
+        text-align: left;
+        padding: 20px;
+        margin: 0 15px 0px 0px;
+    }
+    
+    h3 {
+        font-family: Arial, Helvetica, Verdana sans-serif;
         color: #000000;
         font-size: xx-large;
         text-align: left;
-        padding: 5px;
-        margin: 0 -15px 20px -15px;
+        padding: 20px;
+        margin: 0 15px 0px 0px;
     }
     
     nav {
         font-family: Arial, Helvetica, Verdana sans-serif;
-        color: #000000;
+        color: #e6e6e6;
         font-size: large;
         text-align: left;
-        padding: 20px;
-        margin: 10 15px 20px 15px;
+        padding: 10px;
+        margin: 0 0px 0px 0px;
     }
     
     h2 {
@@ -31,8 +40,11 @@
     
     footer {
         font-family: Arial, Helvetica, Verdana sans-serif;
+        position: relative;
         color: #000000;
         font-size: x-small;
+        padding: 30px;
+        margin-top: 200;
     }
     
     .sidebar {
