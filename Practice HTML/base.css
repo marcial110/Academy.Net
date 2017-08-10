@@ -1,0 +1,42 @@
+    p {
+        font-family: 'Quicksand', sans-serif;
+        color: #000000;
+        font-size: medium;
+        text-align: left;
+    }
+    
+    h1 {
+        font-family: Arial, Helvetica, Verdana sans-serif;
+        color: #000000;
+        font-size: xx-large;
+        text-align: left;
+        padding: 5px;
+        margin: 0 -15px 20px -15px;
+    }
+    
+    nav {
+        font-family: Arial, Helvetica, Verdana sans-serif;
+        color: #000000;
+        font-size: large;
+        text-align: left;
+        padding: 20px;
+        margin: 10 15px 20px 15px;
+    }
+    
+    h2 {
+        font-family: Arial, Helvetica, Verdana sans-serif;
+        color: #0000ff;
+        font-size: larger;
+    }
+    
+    footer {
+        font-family: Arial, Helvetica, Verdana sans-serif;
+        color: #000000;
+        font-size: x-small;
+    }
+    
+    .sidebar {
+        float: right;
+        width: 170px;
+        margin-top: 90px;
+    }
