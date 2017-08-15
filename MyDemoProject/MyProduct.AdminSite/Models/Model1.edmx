@@ -13,6 +13,8 @@
           <Property Name="Category" Type="nvarchar" MaxLength="50" />
           <Property Name="DescriptionC" Type="nvarchar(max)" />
           <Property Name="Active" Type="bit" />
+          <Property Name="CreateDateTime" Type="datetime" />
+          <Property Name="UpdateDateTime" Type="datetime" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -26,6 +28,8 @@
           <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Keywords" Type="nvarchar" MaxLength="50" />
           <Property Name="Active" Type="bit" />
+          <Property Name="CreateDateTime" Type="datetime" />
+          <Property Name="UpdateDateTime" Type="datetime" />
         </EntityType>
         <EntityType Name="ProductImage">
           <Key>
@@ -36,6 +40,8 @@
           <Property Name="DescriptionPI" Type="nvarchar(max)" />
           <Property Name="ImageUrl" Type="nvarchar" MaxLength="500" />
           <Property Name="Active" Type="bit" />
+          <Property Name="CreateDateTime" Type="datetime" />
+          <Property Name="UpdateDateTime" Type="datetime" />
         </EntityType>
         <Association Name="FK__Product__Active__1273C1CD">
           <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
@@ -87,6 +93,8 @@
           <Property Name="DescriptionC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Active" Type="Boolean" />
           <NavigationProperty Name="Products" Relationship="Self.FK__Product__Active__1273C1CD" FromRole="Category" ToRole="Product" />
+          <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateDateTime" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -102,6 +110,8 @@
           <Property Name="Active" Type="Boolean" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Product__Active__1273C1CD" FromRole="Product" ToRole="Category" />
           <NavigationProperty Name="ProductImages" Relationship="Self.FK__ProductIm__Activ__15502E78" FromRole="Product" ToRole="ProductImage" />
+          <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateDateTime" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="ProductImage">
           <Key>
@@ -113,6 +123,8 @@
           <Property Name="ImageUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Active" Type="Boolean" />
           <NavigationProperty Name="Product" Relationship="Self.FK__ProductIm__Activ__15502E78" FromRole="ProductImage" ToRole="Product" />
+          <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
+          <Property Name="UpdateDateTime" Type="DateTime" Precision="3" />
         </EntityType>
         <Association Name="FK__Product__Active__1273C1CD">
           <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
@@ -160,6 +172,8 @@
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="ProductsWebModel.Category">
               <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Category1" ColumnName="Category" />
                 <ScalarProperty Name="DescriptionC" ColumnName="DescriptionC" />
@@ -170,6 +184,8 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="ProductsWebModel.Product">
               <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -184,6 +200,8 @@
           <EntitySetMapping Name="ProductImages">
             <EntityTypeMapping TypeName="ProductsWebModel.ProductImage">
               <MappingFragment StoreEntitySet="ProductImage">
+                <ScalarProperty Name="UpdateDateTime" ColumnName="UpdateDateTime" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="DescriptionPI" ColumnName="DescriptionPI" />

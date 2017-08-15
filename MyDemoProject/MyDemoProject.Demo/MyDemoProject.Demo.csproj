@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Catalog1.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -126,6 +127,9 @@
     <Content Include="Index.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="scripts\Catalog.js" />
+    <Content Include="scripts\CatalogData.js" />
+    <Content Include="scripts\Details.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

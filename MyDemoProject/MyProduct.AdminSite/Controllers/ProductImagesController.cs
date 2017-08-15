@@ -48,8 +48,10 @@ namespace MyProduct.AdminSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,ProductId,DescriptionPI,ImageUrl,Active")] ProductImage productImage)
+        public ActionResult Create([Bind(Include = "Id,ProductId,DescriptionPI,ImageUrl,Active,CreateDateTime,UpdateDateTime")] ProductImage productImage)
         {
+            productImage.CreateDateTime = DateTime.Now;
+            productImage.UpdateDateTime = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.ProductImages.Add(productImage);
@@ -82,8 +84,9 @@ namespace MyProduct.AdminSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,ProductId,DescriptionPI,ImageUrl,Active")] ProductImage productImage)
+        public ActionResult Edit([Bind(Include = "Id,ProductId,DescriptionPI,ImageUrl,Active,UpdateDateTime")] ProductImage productImage)
         {
+            productImage.UpdateDateTime = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.Entry(productImage).State = EntityState.Modified;

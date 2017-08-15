@@ -46,8 +46,10 @@ namespace MyProduct.AdminSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Category1,DescriptionC,Active")] Category category)
+        public ActionResult Create([Bind(Include = "Id,Category1,DescriptionC,Active,CreateDateTime,UpdateDateTime")] Category category)
         {
+            category.CreateDateTime = DateTime.Now;
+            category.UpdateDateTime = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.Categories.Add(category);
@@ -78,8 +80,9 @@ namespace MyProduct.AdminSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Category1,DescriptionC,Active")] Category category)
+        public ActionResult Edit([Bind(Include = "Id,Category1,DescriptionC,Active,UpdateDateTime")] Category category)
         {
+            category.UpdateDateTime = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.Entry(category).State = EntityState.Modified;
