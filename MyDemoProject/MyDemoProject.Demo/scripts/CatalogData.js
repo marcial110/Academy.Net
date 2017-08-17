@@ -19,7 +19,28 @@
     "title": "iPhone 7",
     "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
     "imgUrl": "Images/iphone7.png"
-  }
+  },
+      "Product4":
+    {
+        "id": 3,
+    "title": "iPhone 5",
+    "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+    "imgUrl": "Images/iphone5.jpg"
+    },
+    "Product5":
+    {
+        "id": 4,
+        "title": "iPhone 6",
+        "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+        "imgUrl": "Images/iphone6.jpg"
+    },
+      "Product6":
+        {
+         "id": 5,
+         "title": "iPhone 7",
+         "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+         "imgUrl": "Images/iphone7.png"
+        }
 }
 
 var JSONDetails = {
