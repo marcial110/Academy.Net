@@ -6,6 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="e4023cdfbbf24891874430ed55810db9" Name="Diagram1">
         <EntityTypeShape EntityType="ProductsWebModel.Product" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductsWebModel.ProductImage" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="ProductsWebModel.FK__ProductIm__Activ__15502E78" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -9,9 +9,10 @@ function loadProduct() {
 
 function FindMyProduct(id) {
     var ProductDetails = "";
-    $.each(MyCatalogData, function (element, object) {
-        if (object.id == id)
+    $.each(JSONDetails, function (element, object) {
+        if (object.id == id) {
             ProductDetails = object;
+        }
     });
     return ProductDetails;
 }
@@ -20,12 +21,19 @@ function FindMyProduct(id) {
 //Dynamic build your collection
 function buildMyProduct(myProduct) {
     var html = "";
-    html += "<div><h4>" + myProduct.title + "</h4></a></div>";
-    html += "<div><img class='Catalog' src='" + myProduct.imgUrl + "'alt='/></div>";
-    html += "<div class='caption'>" + myProduct.description + "</div></div></div></div>";
-
-    $("#MyDynamicProductDetail").append(html);
+    html += "<div><h3>" + myProduct.title + "</h3></div>";
+    html += "<div class='col-md-3'><div class='thumbnail'><img class='Catalog MainImage' src='" + myProduct.MainImage + "' /></div></div>";
+    html += "<div class='col-md-3'>";
+    html += "<div>" + myProduct.description + "</div>";
+    html += "<div>" + myProduct.model + "</div>";
+    html += "<div>" + myProduct.price + "</div></div>";
+    $.each(myProduct.productImages, function (element, image) {
+        html += "<div id='ImageContainer'>Images:<ul>";
+        html += "<li><img class='Thumb' src='" + image.imgUrl + "' /></li></ul>";
+    });
+    $("#MyDinamicProductDetails").append(html);
 }
+
 
 function getJsonFromUrl() {
     var query = location.search.substr(1);
@@ -37,5 +45,6 @@ function getJsonFromUrl() {
         result[item[0]] = decodeURIComponent(item[1]);
     });
     //we need only the ID
-    return result.id;
+    return result['id '];
+    //return result.id;
 }

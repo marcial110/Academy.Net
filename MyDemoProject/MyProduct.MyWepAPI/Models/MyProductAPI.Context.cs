@@ -26,5 +26,6 @@ namespace MyProduct.MyWepAPI.Models
         }
     
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductImage> ProductImages { get; set; }
     }
 }

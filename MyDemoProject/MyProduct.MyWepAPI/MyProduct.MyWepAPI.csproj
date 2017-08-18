@@ -226,6 +226,9 @@
     <Compile Include="Models\Product.cs">
       <DependentUpon>MyProductAPI.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductImage.cs">
+      <DependentUpon>MyProductAPI.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -281,6 +284,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\LoadData.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
